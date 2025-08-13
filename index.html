@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>faganafandiyev — terminal blog (futuristic)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="space"></canvas>
+  <div class="grid-overlay"></div>
+  <div class="window" role="application" aria-label="Terminal" id="terminal-window">
+    <div class="titlebar" id="titlebar">
+      <div class="title" id="title-text">fagan@kr1y0s — Terminal</div>
+      <div class="quickbar">
+        <button class="qbtn" data-run="cd ~ && echo Welcome && help">Welcome</button>
+        <button class="qbtn" data-run="cd ~ && cat about.md">About</button>
+        <button class="qbtn" data-run="cd ~ && cd blogs && ls">Blog</button>
+        <button class="qbtn" data-run="cd ~ && cat resume.txt">Resume</button>
+        <button class="qbtn" data-run="cd ~ && help">Help</button>
+        <button class="qbtn theme-btn" data-theme="matrix">🎨 Themes</button>
+        <button class="qbtn anim-btn" data-animation="particles">🌟 Animations</button>
+      </div>
+      <div class="traffic" aria-hidden="true">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+      </div>
+    </div>
+    <div class="terminal">
+      <div id="screen" class="screen" aria-live="polite"></div>
+      <div class="inputbar">
+        <span class="ps1" id="ps1">fagan@kr1y0s ~ &gt;</span>
+        <input id="cmd" type="text" autocomplete="off" spellcheck="false" aria-label="terminal input" />
+      </div>
+    </div>
+    <!-- Resize handles -->
+    <div class="resize-handle resize-n"></div>
+    <div class="resize-handle resize-s"></div>
+    <div class="resize-handle resize-w"></div>
+    <div class="resize-handle resize-e"></div>
+    <div class="resize-handle resize-nw"></div>
+    <div class="resize-handle resize-ne"></div>
+    <div class="resize-handle resize-sw"></div>
+    <div class="resize-handle resize-se"></div>
+  </div>
+
+  <script id="posts-manifest" type="application/json">{
+    "cwd":"~",
+    "files":[
+      {"name":"about.md","path":"posts/about.md","type":"file"},
+      {"name":"welcome.md","path":"posts/welcome.md","type":"file"},
+      {"name":"notes.md","path":"posts/notes.md","type":"file"},
+      {"name":"resume.txt","path":"posts/resume.txt","type":"file"},
+      {"name":".flag.txt","path":"posts/.flag.txt","type":"file"}
+    ],
+    "dirs":[
+      {"name":"blogs","files":[
+        {"name":"hello-world.md","path":"blogs/hello-world.md","type":"file"},
+        {"name":"pentest-tips.md","path":"blogs/pentest-tips.md","type":"file"},
+        {"name":"ctf-writeup.md","path":"blogs/ctf-writeup.md","type":"file"}
+      ]},
+      {"name":"/usr/local/bin","files":[{"name":"nano","path":"bin/nano","type":"suid"}]},
+      {"name":"/root","files":[{"name":"root.txt","path":"secret/root.txt","type":"file"}]}
+    ]
+  }</script>
+
+  <script id="resume-text" type="text/plain">FAGAN AFANDIYEV
+Email: faganafandiyev@usf.edu
+Site: faganafandiyev.com
+LinkedIn: www.linkedin.com/in/fagan-afandiyev
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
