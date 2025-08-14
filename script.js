@@ -1773,9 +1773,9 @@ window.addEventListener('load', async () => {
 // In-memory sample files (override fetch)
 (function() {
   const sample = {
-  'posts/welcome.md': `# Welcome\n\nI'm **Fagan Afandiyev**, an offensive security enthusiast and CTF competitor focused on Active Directory and red team tradecraft. This terminal UI lets you explore a styled mini-filesystem of my content.\n\nStart with \`cat about.md\` for a quick background or \`cat contact.md\` to reach out.`,
-  'posts/about.md': `# About\n\nOffensive security intern at White Knight Labs and USF cyber security student (graduating 2027). I focus on AD exploitation, operational red team tradecraft. Notable wins include Def Con 33 Adversary Village CTF and multiple first-place collegiate / industry competitions.\n\nSee \`cat contact.md\` to connect.`,
-  'posts/contact.md': `# Contact\n\n**Email:** [faganafandiyev@usf.edu](mailto:faganafandiyev@usf.edu)  \n**Site:** [faganafandiyev.com](https://faganafandiyev.com)  \n**LinkedIn:** [linkedin.com/in/fagan-afandiyev](https://www.linkedin.com/in/fagan-afandiyev)  `,
+  'posts/welcome.md': `# Welcome\nI'm **Fagan Afandiyev**, an offensive security enthusiast and CTF competitor focused on Active Directory and red team tradecraft. This terminal UI lets you explore a styled mini-filesystem of my content.\n\nStart with \`cat about.md\` for a quick background or \`cat contact.md\` to reach out.`,
+  'posts/about.md': `# About\nOffensive security intern at White Knight Labs and USF cyber security student (graduating 2027). I focus on AD exploitation, operational red team tradecraft. Notable wins include Def Con 33 Adversary Village CTF and multiple first-place collegiate / industry competitions.\n\nSee \`cat contact.md\` to connect.`,
+  'posts/contact.md': `# Contact\n**Email:** [faganafandiyev@usf.edu](mailto:faganafandiyev@usf.edu)  \n**Site:** [faganafandiyev.com](https://faganafandiyev.com)  \n**LinkedIn:** [linkedin.com/in/fagan-afandiyev](https://www.linkedin.com/in/fagan-afandiyev)  `,
     'posts/.flag.txt': 'FLAG{TERMINAL_THEME_FTW}',
     'posts/resume.txt': `FAGAN AFANDIYEV
 ===============
