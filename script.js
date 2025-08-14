@@ -1773,24 +1773,9 @@ window.addEventListener('load', async () => {
 // In-memory sample files (override fetch)
 (function() {
   const sample = {
-    'posts/welcome.md': `# Welcome
-
-This is a terminal-style blog. Click a filename after ls or type cat <file>.
-
-- Supports local Markdown (.md) files
-- Typewriter animations
-- Particle background
-- Green neon theme
-`,
-    'posts/about.md': `# About
-
-Built with pure HTML/CSS/JS.`,
-    'posts/notes.md': `## Notes
-
-Use find / -perm -4000 -type f 2>/dev/null to discover a SUID helper.
-Try strings /usr/bin/nano.
-Then run nano -s /bin/sh.
-`,
+  'posts/welcome.md': `# Welcome\n\nHi, I'm **Fagan Afandiyev** — offensive security practitioner, CTF competitor, and cyber security student at the University of South Florida.\n\n**Highlights**\n- 1st Place: Def Con 33 Adversary Village CTF (2025)\n- 1st Place: TempleLabs Social Engineering Competition (2025)\n- 1st Place: BSides Tampa Hack The Box CTF (2025)\n- 1st Place: NCAE Cyber Games SE Region (2024)\n- Multiple top finishes in collegiate and industry competitions\n\n**Focus Areas**\n- Active Directory & enterprise network exploitation\n- Red Team tradecraft & OPSEC\n- Evasion, lateral movement, privilege escalation\n- Offensive education & tooling\n\nType \`cat resume.txt\` for a condensed resume or explore the blog. Try:\n\nCommands to start:\n\n\`ls\` — list files\n\`cat about.md\` — background\n\`cat contact.md\` — reach me\n\`animation\` — list animations\n\`theme\` — list themes\n\nStay curious — hack ethically.`,
+  'posts/about.md': `# About\n\nI'm **Fagan Afandiyev**, a cyber security student (B.S. Cyber Security, USF — graduating May 2027) and offensive security intern at **White Knight Labs**.\n\n### What I Do\n- Build/red team attack paths across complex Active Directory forests\n- Develop training material (1,000+ page expert-level OADOC course & offensive labs)\n- Create offensive automation tooling (password abuse, LDAP obfuscation, payload delivery)\n- Lead community: President of WCSC (150+ member security club) and founding member of CyberHerd\n\n### Notable Achievements\n- Def Con 33 Adversary Village CTF — 1st Place\n- TempleLabs Social Engineering Competition — 1st Place\n- BSides Tampa Hack The Box CTF — 1st Place\n- NCAE Cyber Games SE Region — 1st Place\n- CPTC — 2nd Place (2024)\n- Aviation ISAC CTF — 2nd Place (2024)\n\n### Certifications\nOSEP (in progress), CAPE, CPTS, CRTO, ARTO, Security+\n\n### Tech / Tools\nAD exploitation (BloodHound, Rubeus, Impacket, NetExec, Certipy), C2 (Cobalt Strike, Sliver, Mythic, Havoc), detection evasion, Windows internals, and structured tradecraft.\n\n### Philosophy\nPrecision, stealth, repeatability. I like turning complex attack surfaces into approachable learning modules.\n\n> "Exploit knowledge decays. Methodology compounds."\n\nMore:\n- \`cat resume.txt\`\n- \`cat contact.md\``,
+  'posts/contact.md': `# Contact\n\nReach out if you want to collaborate, discuss offensive security, or invite me to speak / compete.\n\n**Email:** faganafandiyev@usf.edu  \n**Site:** https://faganafandiyev.com  \n**LinkedIn:** https://www.linkedin.com/in/fagan-afandiyev  \n\nOpen to:\n- Offensive security internships & research\n- Red team / CTF collaboration\n- Educational content & workshop development\n- Tooling & automation ideas\n\nPGP/key info coming soon.`,
     'posts/.flag.txt': 'FLAG{TERMINAL_THEME_FTW}',
     'posts/resume.txt': `FAGAN AFANDIYEV
 ===============
