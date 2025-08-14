@@ -980,8 +980,8 @@ async function doCat(name) {
     println('cat: missing operand');
     return;
   }
-  
-  if (name === 'resume.txt') {
+
+  if (name === 'resume.md') {
     // Using actual resume content
     const resumeContent = `
 FAGAN AFANDIYEV
@@ -1631,7 +1631,7 @@ function helpText() {
     '  ls [path] [-a|-la] — list files (use -a to show hidden files)',
     '  cd [dir] — change directory',
     '  cat [file] — print file; supports Markdown rendering for .md files',
-    '  cat resume.txt — view resume (opens Google Docs link)',
+    '  cat resume.md — view resume (opens Google Docs link)',
     '  less [file] — view file (paged output)',
     '  vim [file] — open fake vim editor',
     '  nano [file] — open fake nano editor (SUID nano can be abused)',
@@ -1777,7 +1777,7 @@ window.addEventListener('load', async () => {
   'posts/about.md': `# About\nOffensive security intern at White Knight Labs and USF cyber security student (graduating 2027). I focus on AD exploitation, operational red team tradecraft. Notable wins include Def Con 33 Adversary Village CTF and multiple first-place collegiate / industry competitions.\n\nSee \`cat contact.md\` to connect.`,
   'posts/contact.md': `# Contact\n**Email:** [faganafandiyev@usf.edu](mailto:faganafandiyev@usf.edu)  \n**Site:** [faganafandiyev.com](https://faganafandiyev.com)  \n**LinkedIn:** [linkedin.com/in/fagan-afandiyev](https://www.linkedin.com/in/fagan-afandiyev)  `,
     'posts/.flag.txt': 'FLAG{TERMINAL_THEME_FTW}',
-    'posts/resume.txt': `FAGAN AFANDIYEV
+    'posts/resume.md': `FAGAN AFANDIYEV
 ===============
 
 🌐 faganafandiyev.com | � faganafandiyev@usf.edu | 🔗 linkedin.com/in/fagan-afandi
