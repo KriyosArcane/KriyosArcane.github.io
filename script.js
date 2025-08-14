@@ -1777,36 +1777,7 @@ window.addEventListener('load', async () => {
   'posts/about.md': `# About\nOffensive security intern at White Knight Labs and USF cyber security student (graduating 2027). I focus on AD exploitation, operational red team tradecraft. Notable wins include Def Con 33 Adversary Village CTF and multiple first-place collegiate / industry competitions.\n\nSee \`cat contact.md\` to connect.`,
   'posts/contact.md': `# Contact\n**Email:** [faganafandiyev@usf.edu](mailto:faganafandiyev@usf.edu)  \n**Site:** [faganafandiyev.com](https://faganafandiyev.com)  \n**LinkedIn:** [linkedin.com/in/fagan-afandiyev](https://www.linkedin.com/in/fagan-afandiyev)  `,
     'posts/.flag.txt': 'FLAG{TERMINAL_THEME_FTW}',
-    'posts/resume.md': `FAGAN AFANDIYEV
-===============
-
-🌐 faganafandiyev.com | � faganafandiyev@usf.edu | 🔗 linkedin.com/in/fagan-afandi
-
-EDUCATION
----------
-Bachelor of Science in Cyber Security                                    Graduation: May 2027
-University of South Florida, Tampa FL
-Founding Member at CyberHerd (USF's Cybersecurity Competition team)
-
-CERTIFICATIONS
---------------
-• Offensive Security Experienced Penetration Tester (OSEP)              Expected Oct 2025
-• HackTheBox Certified Active Directory Pentesting Expert (CAPE)        April 2025
-• HackTheBox Certified Penetration Testing Specialist (CPTS)            July 2025
-• Zero-Point Security Certified Red Team Operator (CRTO)                June 2025
-• WhiteKnightLabs Advanced Red Team Operator (ARTO)                     July 2024
-• CompTIA Security+                                                      March 2024
-
-TECHNICAL SKILLS
-----------------
-Coding: Proficient in C/C++, Python, Powershell, Bash, JavaScript, HTML/CSS;
-        Working Knowledge of SQL, Rust
-
-Offensive Tools: Kali Linux, Nmap, Metasploit, Wireshark, Cobalt Strike,
-                 Sliver, BloodHound, Rubeus, Impacket, NetExec, SharpHound,
-                 Certipy, Mimikatz, PowerSploit, Mythic, Havoc
-
-Complete resume: https://docs.google.com/document/d/14bAwAc0IIuxOXpQhVnNfwh62WPvcfD_v4dHOhpCiFzo/edit?usp=sharing`,
+  'posts/resume.md': `FAGAN AFANDIYEV\n===============\n\n🌐 faganafandiyev.com | faganafandiyev@usf.edu | 🔗 linkedin.com/in/fagan-afandi\n\nEDUCATION\n---------\nBachelor of Science in Cyber Security                            Graduation: May 2027\nUniversity of South Florida, Tampa FL\nFounding Member at CyberHerd (USF's Cybersecurity Competition team)\n\nCERTIFICATIONS\n--------------\n\`\`\`\n• Offensive Security Experienced Penetration Tester (OSEP)   Expected Oct 2025\n• HackTheBox Certified Active Directory Pentesting Expert (CAPE)  Apr 2025\n• HackTheBox Certified Penetration Testing Specialist (CPTS)  Jul 2025\n• Zero-Point Security Certified Red Team Operator (CRTO)      Jun 2025\n• WhiteKnightLabs Advanced Red Team Operator (ARTO)           Jul 2024\n• CompTIA Security+                                          Mar 2024\n\`\`\`\n\nTECHNICAL SKILLS\n----------------\nCoding: C/C++, Python, PowerShell, Bash, JavaScript, HTML/CSS; working knowledge: SQL, Rust\nOffensive: Kali, Nmap, Metasploit, Wireshark, Cobalt Strike, Sliver, BloodHound, Impacket, NetExec, Certipy, Mimikatz, Mythic, Havoc\n\nFull detailed resume (PDF/Doc): https://docs.google.com/document/d/14bAwAc0IIuxOXpQhVnNfwh62WPvcfD_v4dHOhpCiFzo/edit?usp=sharing`,
     'blogs/hello-world.md': `# Hello World
 
 First post in blogs.
