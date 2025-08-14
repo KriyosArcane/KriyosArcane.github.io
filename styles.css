@@ -551,7 +551,7 @@ body {
 @media (max-width: 600px) {
   .window {
   height: 88vh;
-  width: 96vw;
+  width: 90vw; /* narrower for side breathing room */
   /* Move off centered positioning for mobile to avoid browser UI overlap */
   top: calc(env(safe-area-inset-top, 0px) + 12vh);
   left: 50%;
@@ -614,7 +614,7 @@ body {
 @media (max-width: 480px) {
   .window {
   height: 90vh;
-  width: 98vw;
+  width: 92vw; /* slight increase vs 600px but still narrower than full */
   top: calc(env(safe-area-inset-top, 0px) + 14vh);
   left: 50%;
   transform: translateX(-50%);
@@ -669,7 +669,7 @@ body {
 @media (max-width: 360px) {
   .window {
   height: 92vh;
-  width: 99vw;
+  width: 94vw; /* maintain margin even on very small screens */
   top: calc(env(safe-area-inset-top, 0px) + 15vh);
   left: 50%;
   transform: translateX(-50%);
