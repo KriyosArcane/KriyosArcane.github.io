@@ -318,7 +318,7 @@ const ps1El = document.getElementById('ps1');
 const titleEl = document.getElementById('title-text');
 const manifest = JSON.parse(document.getElementById('posts-manifest').textContent);
 const resumeText = document.getElementById('resume-text').textContent || '';
-const YT = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+  const YT = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // YouTube link for the reward
 
 const COMMANDS = ['whoami', 'id', 'pwd', 'ls', 'cd', 'cat', 'less', 'vim', 'nano', 'ps', 'strings', 'find', 'echo', 'sudo', 'clear', 'help', 'nmap', 'ssh', 'banner', 'msfconsole', 'theme', 'animation'];
 
@@ -1773,9 +1773,9 @@ window.addEventListener('load', async () => {
 // In-memory sample files (override fetch)
 (function() {
   const sample = {
-  'posts/welcome.md': `# Welcome\n\nI'm **Fagan Afandiyev**, an offensive security enthusiast and CTF competitor focused on Active Directory, red team tradecraft, and building repeatable attack methodologies. This terminal UI lets you explore a styled mini-filesystem of my content.\n\nStart with \`cat about.md\` for a quick background or \`cat contact.md\` to reach out. Use \`theme\` or \`animation\` to play with the visuals.`,
-  'posts/about.md': `# About\n\nOffensive security intern at White Knight Labs and USF cyber security student (graduating 2027). I focus on enterprise / AD exploitation, operational red team tradecraft, and creating high-impact training material. Notable wins include Def Con 33 Adversary Village CTF and multiple first-place collegiate / industry competitions.\n\nPhilosophy: precision + stealth + repeatability. See \`cat contact.md\` to connect.`,
-  'posts/contact.md': `# Contact\n\nReach out if you want to collaborate, discuss offensive security, or invite me to speak / compete.\n\n**Email:** faganafandiyev@usf.edu  \n**Site:** https://faganafandiyev.com  \n**LinkedIn:** https://www.linkedin.com/in/fagan-afandiyev  `,
+  'posts/welcome.md': `# Welcome\n\nI'm **Fagan Afandiyev**, an offensive security enthusiast and CTF competitor focused on Active Directory and red team tradecraft. This terminal UI lets you explore a styled mini-filesystem of my content.\n\nStart with \`cat about.md\` for a quick background or \`cat contact.md\` to reach out.`,
+  'posts/about.md': `# About\n\nOffensive security intern at White Knight Labs and USF cyber security student (graduating 2027). I focus on AD exploitation, operational red team tradecraft. Notable wins include Def Con 33 Adversary Village CTF and multiple first-place collegiate / industry competitions.\n\nSee \`cat contact.md\` to connect.`,
+  'posts/contact.md': `# Contact\n\n**Email:** [faganafandiyev@usf.edu](mailto:faganafandiyev@usf.edu)  \n**Site:** [faganafandiyev.com](https://faganafandiyev.com)  \n**LinkedIn:** [linkedin.com/in/fagan-afandiyev](https://www.linkedin.com/in/fagan-afandiyev)  `,
     'posts/.flag.txt': 'FLAG{TERMINAL_THEME_FTW}',
     'posts/resume.txt': `FAGAN AFANDIYEV
 ===============
