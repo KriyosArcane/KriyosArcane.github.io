@@ -1075,6 +1075,31 @@ Google Docs version: https://docs.google.com/document/d/14bAwAc0IIuxOXpQhVnNfwh6
     
     // Render the resume content line by line with proper formatting
     const lines = resumeContent.trim().split('\n');
+
+    // Dynamic alignment: detect lines ending with a date or month-year and align that column
+    const dateToken = '(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\\s+\d{4}|May\\s+2027|Present';
+    const datePattern = new RegExp('(' + dateToken + '(?:\\s*[–-]\\s*(?:' + dateToken + '))?)$','i');
+    const alignTargets = [];
+    let maxLeftLen = 0;
+    lines.forEach((l, idx) => {
+      const trimmed = l.replace(/\s+$/,'');
+      if (/^(•|WCSC|White Knight Labs|NetExec|Bachelor|\s*•)/.test(trimmed) || /Def Con|TempleLabs|BSides|NCAE|Collegiate|Aviation/.test(trimmed)) {
+        const m = trimmed.match(datePattern);
+        if (m) {
+          const right = m[1];
+          const left = trimmed.slice(0, trimmed.lastIndexOf(right)).replace(/\s+$/,'');
+          alignTargets.push({ idx, left, right });
+          if (left.length > maxLeftLen) maxLeftLen = left.length;
+        }
+      }
+    });
+    if (alignTargets.length) {
+      const column = maxLeftLen + 2; // gap
+      alignTargets.forEach(row => {
+        const pad = ' '.repeat(Math.max(1, column - row.left.length));
+        lines[row.idx] = row.left + pad + row.right;
+      });
+    }
     for (const line of lines) {
       if (line.trim() === '') {
         println('');
