@@ -3,26 +3,79 @@ const ANIMATIONS = {
   particles: {
     name: 'Floating Particles',
     init: function() {
+      // Density based on screen area so large displays don't look empty
+      const area = window.animationW * window.animationH;
+      const base = 110; // baseline for ~1920x1080
+      const target = Math.min(300, Math.round(base * (area / (1920*1080))));
       this.dots = [];
-      for (let i = 0; i < 110; i++) {
+      for (let i = 0; i < target; i++) {
         this.dots.push({
           x: Math.random() * window.animationW,
           y: Math.random() * window.animationH,
-          vx: (Math.random() - 0.5) * 0.4,
-          vy: (Math.random() - 0.5) * 0.4,
-          r: Math.random() * 1.6 + 0.4
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          r: Math.random() * 1.8 + 0.6,
+          pulse: Math.random() * Math.PI * 2
         });
       }
     },
     render: function(ctx, w, h) {
+      // Subtle fade for trails
+      ctx.fillStyle = 'rgba(0,0,0,0.20)';
+      ctx.fillRect(0, 0, w, h);
+
+      const color = window.particleColor || 'rgba(54,255,122,0.55)';
+      const maxDist = Math.min(240, Math.max(120, Math.min(w, h) / 3));
+
+      // Draw connections first (lighter stroke)
+      for (let i = 0; i < this.dots.length; i++) {
+        const a = this.dots[i];
+        for (let j = i + 1; j < this.dots.length; j++) {
+          const b = this.dots[j];
+          const dx = a.x - b.x;
+            const dy = a.y - b.y;
+            const dist = dx*dx + dy*dy;
+            if (dist < maxDist * maxDist) {
+              const alpha = 1 - Math.sqrt(dist) / maxDist;
+              if (alpha > 0.04) {
+                ctx.strokeStyle = color.replace(/rgba\(([^)]+),[^,]+\)$/,'rgba($1,' + (alpha * 0.35).toFixed(3) + ')');
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(a.x, a.y);
+                ctx.lineTo(b.x, b.y);
+                ctx.stroke();
+              }
+            }
+        }
+      }
+
+      // Update & draw particles
       for (const p of this.dots) {
         p.x += p.vx;
         p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
+        p.pulse += 0.02;
+        if (p.x < 0) { p.x = 0; p.vx *= -1; }
+        if (p.x > w) { p.x = w; p.vx *= -1; }
+        if (p.y < 0) { p.y = 0; p.vy *= -1; }
+        if (p.y > h) { p.y = h; p.vy *= -1; }
+
+        const glow = (Math.sin(p.pulse) + 1) * 0.5; // 0..1
+        const radius = p.r * (0.7 + glow * 0.6);
+        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius * 3);
+        // derive RGB components from color if rgba(r,g,b,a)
+        const m = color.match(/rgba\((\d+),(\d+),(\d+)/);
+        const rgb = m ? `${m[1]},${m[2]},${m[3]}` : '54,255,122';
+        gradient.addColorStop(0, `rgba(${rgb},0.9)`);
+        gradient.addColorStop(0.4, `rgba(${rgb},0.35)`);
+        gradient.addColorStop(1, `rgba(${rgb},0)`);
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = window.particleColor || 'rgba(54,255,122,0.55)';
+        ctx.fillStyle = gradient;
+        ctx.arc(p.x, p.y, radius * 3, 0, Math.PI * 2);
+        ctx.fill();
+        // core
+        ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.arc(p.x, p.y, radius * 0.35, 0, Math.PI * 2);
         ctx.fill();
       }
     }
