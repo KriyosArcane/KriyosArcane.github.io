@@ -996,11 +996,11 @@ University of South Florida, Tampa FL
 Founding Member at CyberHerd (USF's Cybersecurity Competition team)
 
 Recognitions/Awards:
-• 1st Place – Def Con 33, Adversary Village CTF                          August 2025
-• 1st Place – TempleLabs, Social Engineering Competition                 April 2025
+• 1st Place – Def Con 33, Adversary Village CTF                         August 2025
+• 1st Place – TempleLabs, Social Engineering Competition                April 2025
 • 1st Place – BSides Tampa, Hack The Box CTF                            May 2025
 • 1st Place – NCAE, Cyber Games South East Region                       Feb 2024
-• 2nd Place – Collegiate Penetration Testing Competition                 November 2024
+• 2nd Place – Collegiate Penetration Testing Competition                November 2024
 • 2nd Place – Aviation ISAC CTF                                         October 2024
 
 CERTIFICATIONS
@@ -1010,7 +1010,7 @@ CERTIFICATIONS
 • HackTheBox Certified Penetration Testing Specialist (CPTS)            July 2025
 • Zero-Point Security Certified Red Team Operator (CRTO)                June 2025
 • WhiteKnightLabs Advanced Red Team Operator (ARTO)                     July 2024
-• CompTIA Security+                                                      March 2024
+• CompTIA Security+                                                     March 2024
 
 WORK EXPERIENCE
 ---------------
